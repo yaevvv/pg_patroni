@@ -1,0 +1,8 @@
+haproxy:
+  image: 'haproxy:latest'
+  ports:
+    - '5454:5454'
+  container_name: ha
+  volumes:
+    - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg
+  restart: unless-stopped
